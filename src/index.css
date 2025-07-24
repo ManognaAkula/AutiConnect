@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Dyslexia Font */
+@import url("https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.0/open-dyslexic.min.css");
+
+/* 🌟 Font Family Setup */
+body {
+  @apply font-sans text-gray-800;
+  background: linear-gradient(to bottom right, #fef6ff, #e0f7fa);
+  transition: background 0.3s ease-in-out;
+}
+
+/* 🌐 Dyslexia Mode Toggle */
+.dyslexic-mode {
+  font-family: "OpenDyslexic", sans-serif !important;
+  letter-spacing: 0.5px;
+}
+
+/* 💡 Universal Focus (for Keyboard Navigation) */
+*:focus {
+  outline: 3px solid #7c3aed;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* 🧭 Navbar Styling */
+nav {
+  @apply bg-indigo-500 text-white shadow-lg;
+}
+
+nav h1 {
+  @apply text-2xl font-extrabold tracking-wide;
+}
+
+nav ul li a {
+  @apply px-3 py-2 rounded-md hover:bg-indigo-600 transition-colors;
+}
+
+/* 🧱 Section Layouts */
+.section {
+  @apply max-w-6xl mx-auto px-6 py-12;
+}
+
+.section-title {
+  @apply text-3xl font-bold mb-6 text-indigo-700;
+}
+
+/* 🧩 Game Area */
+.game-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center;
+  padding: 2rem;
+}
+
+/* 🎲 Game Tile Style */
+.game-tile {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  @apply border-4 border-orange-300 rounded-2xl p-8 font-bold text-xl text-center shadow-md transform transition-transform duration-300;
+}
+
+.game-tile:hover {
+  transform: scale(1.05) rotate(1deg);
+  @apply shadow-xl;
+}
+
+/* 🧾 Card */
+.card {
+  @apply bg-white rounded-2xl shadow-lg p-6 transition hover:shadow-xl;
+}
+
+/* 🧷 Buttons */
+button {
+  @apply bg-pink-500 text-white font-bold px-5 py-2 rounded-full shadow-md transition-all;
+}
+
+button:hover {
+  @apply bg-pink-600 brightness-110 scale-105;
+}
+
+/* 🎛 Dyslexia Toggle Button */
+.toggle-button {
+  @apply fixed top-5 right-5 bg-yellow-300 text-black px-4 py-2 rounded-lg font-bold shadow hover:bg-yellow-400 transition;
+}
+
+/* 🧸 Headings with Flair */
+.fancy-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #4b0082;
+  text-shadow: 1px 1px 8px rgba(128, 0, 128, 0.1);
+}
+
+/* 🔤 Highlighted Text */
+.highlight {
+  background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+  padding: 0 0.4em;
+  border-radius: 8px;
+}
+
+/* 💻 Footer */
+footer {
+  @apply bg-indigo-100 text-center p-4 text-gray-600 text-sm;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid #facc15; /* yellow-400 */
+  }
+  
+  .triangle-outline {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid rgba(209, 213, 219, 0.4); /* gray-300 with opacity */
+  }
+  
